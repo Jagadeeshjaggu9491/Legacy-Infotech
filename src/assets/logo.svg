@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60" fill="none">
+  <defs>
+    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6C4CF1" />
+      <stop offset="50%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <linearGradient id="logo-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#6C4CF1" stop-opacity="0" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#6C4CF1" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Logo Symbol / Emblem -->
+  <g filter="url(#shadow)">
+    <rect x="5" y="8" width="44" height="44" rx="14" fill="url(#logo-grad)" />
+    <path d="M20 18H34C36.2091 18 38 19.7909 38 22V22C38 24.2091 36.2091 26 34 26H24V32H34C36.2091 32 38 33.7909 38 36V36C38 38.2091 36.2091 40 34 40H20V18Z" fill="#FFFFFF" fill-rule="evenodd" />
+    <circle cx="17" cy="22" r="3" fill="#06B6D4" />
+  </g>
+
+  <!-- Typography -->
+  <text x="62" y="34" font-family="'Inter', sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    LEGACY<tspan fill="url(#logo-grad)">INFOTECH</tspan>
+  </text>
+  <text x="63" y="47" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.65)" letter-spacing="2.5">
+    ENTERPRISE SOLUTIONS
+  </text>
+</svg>

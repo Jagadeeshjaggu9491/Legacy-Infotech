@@ -1,0 +1,222 @@
+/* Legacy Infotech Header Stylesheet (SCSS) - Pure Solid White Background Theme */
+
+$primary: #0052CC;
+$primary-hover: #0040A8;
+$secondary: #0099FF;
+$text-main: #0F172A;
+$text-muted: #475569;
+$container-max-width: 1320px;
+$radius-md: 16px;
+$radius-lg: 18px;
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  height: 85px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
+  .header-wrapper {
+    width: 100%;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Logo */
+  .brand-logo-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    transform-origin: left center;
+    transition: transform 0.3s ease;
+
+    img {
+      height: 46px;
+      width: auto;
+      display: block;
+    }
+  }
+
+  /* Desktop Nav Menu */
+  .desktop-nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .nav-item {
+      position: relative;
+
+      .nav-link-item {
+        color: $text-muted;
+        text-decoration: none;
+        font-family: 'Sora', sans-serif;
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 0.5rem 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        cursor: pointer;
+        transition: color 0.25s ease;
+        position: relative;
+
+        /* Animated Underline */
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 2.5px;
+          background: linear-gradient(90deg, $primary, $secondary);
+          border-radius: 2px;
+          box-shadow: 0 0 8px rgba(0, 82, 204, 0.4);
+          transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        &:hover {
+          color: $primary;
+
+          &::after {
+            width: 100%;
+          }
+        }
+
+        /* Active Navigation Link State */
+        &.active {
+          color: $primary;
+          font-weight: 700;
+
+          &::after {
+            width: 100%;
+          }
+        }
+
+        .dropdown-chevron {
+          transition: transform 0.25s ease;
+          color: #64748B;
+        }
+
+        &.menu-open .dropdown-chevron {
+          transform: rotate(180deg);
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+/* Mega Dropdown Item Hover Styling for Pure White BG */
+.mega-dropdown-item {
+  &:hover {
+    background: rgba(0, 82, 204, 0.06) !important;
+    transform: translateX(4px);
+
+    .dropdown-icon-box {
+      background: linear-gradient(135deg, $primary, $secondary) !important;
+      color: #FFFFFF !important;
+      border-color: transparent !important;
+      box-shadow: 0 4px 14px rgba(0, 82, 204, 0.35);
+    }
+  }
+}
+
+/* Mobile Drawer Links */
+.mobile-nav-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: $text-main;
+  text-decoration: none;
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+
+  &:hover, &.active {
+    color: $primary;
+    background: rgba(0, 82, 204, 0.08);
+  }
+}
+
+.mobile-accordion-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  color: $text-main;
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary;
+    background: rgba(0, 82, 204, 0.08);
+  }
+}
+
+.mobile-accordion-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-left: 1rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+
+  .mobile-sublink {
+    padding: 0.5rem 0.8rem;
+    color: #475569;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 8px;
+
+    &:hover {
+      color: $primary;
+      background: rgba(0, 82, 204, 0.06);
+    }
+  }
+}
+
+/* Responsive Hide / Show Utility */
+.desktop-only {
+  display: flex;
+}
+
+.mobile-hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: $text-main;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+@media (max-width: 992px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-hamburger-btn {
+    display: flex !important;
+  }
+}
