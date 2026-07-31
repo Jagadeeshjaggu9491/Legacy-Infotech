@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { NavLink, Link, useNavigate } from 'react-router-dom';
+import { NavLink, Link, useNavigate, useLocation } from 'react-router-dom';
 import { useScrollHeader } from '../../hooks/useScrollHeader';
 import { useNavbarAnimations, animateNavItemHover } from '../../hooks/useNavbarAnimations';
 import NavbarButton from './NavbarButton';
@@ -16,6 +16,11 @@ export default function Header({ onOpenContact }) {
   const buttonRef = useRef(null);
 
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Active page detection for mega dropdown buttons
+  const isServicesActive = location.pathname.startsWith('/services');
+  const isIndustriesActive = location.pathname.startsWith('/industries');
 
   // GSAP scroll hook
   const isScrolled = useScrollHeader(headerRef, logoRef);
@@ -109,7 +114,7 @@ export default function Header({ onOpenContact }) {
               >
                 <button
                   type="button"
-                  className={`nav-link-item ${activeDropdown === 'services' ? 'menu-open active' : ''}`}
+                  className={`nav-link-item ${isServicesActive || activeDropdown === 'services' ? 'active' : ''} ${activeDropdown === 'services' ? 'menu-open' : ''}`}
                   onClick={() => handleHeaderClick('/services')}
                   onMouseEnter={(e) => animateNavItemHover(e.currentTarget, true)}
                   onMouseLeave={(e) => animateNavItemHover(e.currentTarget, false)}
@@ -136,7 +141,7 @@ export default function Header({ onOpenContact }) {
               >
                 <button
                   type="button"
-                  className={`nav-link-item ${activeDropdown === 'industries' ? 'menu-open active' : ''}`}
+                  className={`nav-link-item ${isIndustriesActive || activeDropdown === 'industries' ? 'active' : ''} ${activeDropdown === 'industries' ? 'menu-open' : ''}`}
                   onClick={() => handleHeaderClick('/industries')}
                   onMouseEnter={(e) => animateNavItemHover(e.currentTarget, true)}
                   onMouseLeave={(e) => animateNavItemHover(e.currentTarget, false)}
