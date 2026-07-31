@@ -31,9 +31,9 @@ function HomePage({ onOpenContact, onExploreServices }) {
   return (
     <>
       <SEO
-        title="Legacy Infotech | Next-Gen Enterprise Software, AI & Cloud Solutions"
-        description="Legacy Infotech empowers global enterprises with cloud-native software development, AI engineering, US Healthcare RCM, CRM integrations, and FinTech compliance services."
-        keywords="Legacy Infotech, Software Engineering, Cloud Architecture, AI Solutions, US Healthcare RCM, FinTech Compliance, Madhapur Hyderabad"
+        title="Prestin IT Solutions | Next-Gen Enterprise Software, AI & Cloud Solutions"
+        description="Prestin IT Solutions empowers global enterprises with cloud-native software development, AI engineering, US Healthcare RCM, CRM integrations, and FinTech compliance services."
+        keywords="Prestin IT Solutions, Software Engineering, Cloud Architecture, AI Solutions, US Healthcare RCM, FinTech Compliance, Madhapur Hyderabad"
       />
       <HeroSection
         onOpenContact={onOpenContact}

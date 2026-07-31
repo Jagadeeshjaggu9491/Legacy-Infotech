@@ -37,8 +37,8 @@ export default function FaqSection() {
 
   const faqs = [
     {
-      q: '1. What services does Legacy Infotech provide?',
-      a: 'Legacy Infotech provides end-to-end IT solutions including custom software development, mobile & web applications, US Healthcare RCM, CRM implementation (Salesforce/Zoho), BPO services, IT staffing, and back-office support.'
+      q: '1. What services does Prestin IT Solutions provide?',
+      a: 'Prestin IT Solutions provides end-to-end IT solutions including custom software development, mobile & web applications, US Healthcare RCM, CRM implementation (Salesforce/Zoho), BPO services, IT staffing, and back-office support.'
     },
     {
       q: '2. Which industries do you serve?',
@@ -58,7 +58,7 @@ export default function FaqSection() {
     },
     {
       q: '6. How do I get started?',
-      a: 'You can get started by clicking "Get In Touch" or contacting us via email/phone. Our technical team will schedule an initial discovery call within 2 hours.'
+      a: 'You can get started by clicking "Contact Us" or contacting us via email/phone. Our technical team will schedule an initial discovery call within 2 hours.'
     }
   ];
 

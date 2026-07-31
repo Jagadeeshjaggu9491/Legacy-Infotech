@@ -3,15 +3,11 @@ import gsap from 'gsap';
 import DropdownItem from './DropdownItem';
 import {
   Code,
-  Smartphone,
-  Layout,
   HeartPulse,
   Users,
-  Cloud,
-  GitBranch,
-  Cpu,
-  TrendingUp,
+  Headphones,
   Landmark,
+  FileText,
   GraduationCap,
   ShoppingBag,
   Factory,
@@ -62,17 +58,14 @@ export default function MegaMenu({ type, isOpen, onClose, onMouseEnter, onMouseL
 
   if (!isOpen) return null;
 
-  // ALL Services dropdown items redirect to main '/services' page
+  // Services dropdown items EXACTLY matching Home Page services
   const servicesData = [
-    { icon: Code, title: 'Web Development', desc: 'Custom React & Next.js web applications', to: '/services' },
-    { icon: Smartphone, title: 'Mobile App Development', desc: 'Cross-platform iOS & Android mobile apps', to: '/services' },
-    { icon: Layout, title: 'UI/UX Design', desc: 'User-centered design systems & prototypes', to: '/services' },
-    { icon: HeartPulse, title: 'Healthcare Solutions', desc: 'HIPAA compliant telemetry & RCM systems', to: '/services' },
-    { icon: Users, title: 'CRM Solutions', desc: 'Salesforce & Zoho custom integrations', to: '/services' },
-    { icon: Cloud, title: 'Cloud Solutions', desc: 'AWS & Azure multi-cloud architecture', to: '/services' },
-    { icon: GitBranch, title: 'DevOps', desc: 'Automated CI/CD & Kubernetes clusters', to: '/services' },
-    { icon: Cpu, title: 'AI & Automation', desc: 'Private LLMs & intelligent AI workflows', to: '/services' },
-    { icon: TrendingUp, title: 'Banking & Financial', desc: 'KYC, KYB, AML & Sanctions screening', to: '/services' },
+    { icon: Code, title: 'IT Solutions & Software', desc: 'Custom web, mobile & cloud software development', to: '/services' },
+    { icon: HeartPulse, title: 'US Healthcare & RCM', desc: 'HIPAA compliant medical billing & revenue cycle', to: '/services' },
+    { icon: Users, title: 'CRM Services', desc: 'Salesforce & Zoho custom integrations & workflows', to: '/services' },
+    { icon: Headphones, title: 'BPO & Call Center', desc: '24/7 customer support helpdesk & call center', to: '/services' },
+    { icon: Landmark, title: 'Banking & Financial', desc: 'KYC, KYB, AML & Sanctions screening compliance', to: '/services' },
+    { icon: FileText, title: 'Back Office Support', desc: 'Data entry, document indexing & virtual assistance', to: '/services' },
   ];
 
   // ALL Industries dropdown items redirect to main '/industries' page
@@ -102,7 +95,7 @@ export default function MegaMenu({ type, isOpen, onClose, onMouseEnter, onMouseL
         top: '100%',
         left: '50%',
         transform: 'translateX(-50%)',
-        width: type === 'services' ? '780px' : '700px',
+        width: type === 'services' ? '760px' : '700px',
         maxWidth: '92vw',
         background: '#FFFFFF',
         border: '1px solid #E2E8F0',
@@ -125,7 +118,7 @@ export default function MegaMenu({ type, isOpen, onClose, onMouseEnter, onMouseL
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: type === 'services' ? 'repeat(3, 1fr)' : 'repeat(2, 1fr)',
+          gridTemplateColumns: type === 'services' ? 'repeat(2, 1fr)' : 'repeat(2, 1fr)',
           gap: '0.5rem'
         }}
       >

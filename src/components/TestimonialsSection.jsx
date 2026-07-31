@@ -40,7 +40,7 @@ export default function TestimonialsSection() {
       name: 'Sarah Johnson',
       role: 'Operations Director',
       image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
-      content: 'Legacy Infotech exceeded our expectations by delivering a scalable CRM platform ahead of schedule. Their professionalism and technical expertise made the entire process seamless.'
+      content: 'Prestin IT Solutions exceeded our expectations by delivering a scalable CRM platform ahead of schedule. Their professionalism and technical expertise made the entire process seamless.'
     },
     {
       name: 'Michael Anderson',

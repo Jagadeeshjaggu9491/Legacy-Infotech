@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import brandLogo from '../../assets/logo/logo.jpeg';
+import brandLogo from '../../assets/logo/logo.png';
 import { X, ChevronDown } from 'lucide-react';
 import NavbarButton from './NavbarButton';
 
@@ -41,7 +41,7 @@ export default function MobileMenu({ isOpen, onClose, onOpenContact }) {
         <div>
           {/* Top Bar */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2rem' }}>
-            <img src={brandLogo} alt="Legacy Infotech Logo" style={{ height: '38px', width: 'auto' }} />
+            <img src={brandLogo} alt="Prestin IT Solutions Logo" style={{ height: '38px', width: 'auto' }} />
             <button
               onClick={onClose}
               style={{ background: 'none', border: 'none', color: '#0F172A', cursor: 'pointer' }}
@@ -72,10 +72,12 @@ export default function MobileMenu({ isOpen, onClose, onOpenContact }) {
               {servicesExpanded && (
                 <div className="mobile-accordion-content">
                   <NavLink to="/services" className="mobile-sublink" onClick={onClose}>All Services</NavLink>
-                  <NavLink to="/services/web" className="mobile-sublink" onClick={onClose}>Web Development</NavLink>
-                  <NavLink to="/services/mobile" className="mobile-sublink" onClick={onClose}>Mobile App Development</NavLink>
-                  <NavLink to="/services/cloud" className="mobile-sublink" onClick={onClose}>Cloud Solutions</NavLink>
-                  <NavLink to="/services/ai" className="mobile-sublink" onClick={onClose}>AI & Automation</NavLink>
+                  <NavLink to="/services" className="mobile-sublink" onClick={onClose}>IT Solutions & Software</NavLink>
+                  <NavLink to="/services" className="mobile-sublink" onClick={onClose}>US Healthcare & RCM</NavLink>
+                  <NavLink to="/services" className="mobile-sublink" onClick={onClose}>CRM Services</NavLink>
+                  <NavLink to="/services" className="mobile-sublink" onClick={onClose}>BPO & Call Center</NavLink>
+                  <NavLink to="/services" className="mobile-sublink" onClick={onClose}>Banking & Financial</NavLink>
+                  <NavLink to="/services" className="mobile-sublink" onClick={onClose}>Back Office Support</NavLink>
                 </div>
               )}
             </div>
@@ -92,9 +94,9 @@ export default function MobileMenu({ isOpen, onClose, onOpenContact }) {
               {industriesExpanded && (
                 <div className="mobile-accordion-content">
                   <NavLink to="/industries" className="mobile-sublink" onClick={onClose}>All Industries</NavLink>
-                  <NavLink to="/industries/healthcare" className="mobile-sublink" onClick={onClose}>Healthcare</NavLink>
-                  <NavLink to="/industries/finance" className="mobile-sublink" onClick={onClose}>Finance</NavLink>
-                  <NavLink to="/industries/retail" className="mobile-sublink" onClick={onClose}>Retail</NavLink>
+                  <NavLink to="/industries" className="mobile-sublink" onClick={onClose}>Healthcare</NavLink>
+                  <NavLink to="/industries" className="mobile-sublink" onClick={onClose}>Finance</NavLink>
+                  <NavLink to="/industries" className="mobile-sublink" onClick={onClose}>Retail</NavLink>
                 </div>
               )}
             </div>
@@ -105,10 +107,6 @@ export default function MobileMenu({ isOpen, onClose, onOpenContact }) {
 
             <NavLink to="/careers" className="mobile-nav-link" onClick={onClose}>
               Careers
-            </NavLink>
-
-            <NavLink to="/blog" className="mobile-nav-link" onClick={onClose}>
-              Blog
             </NavLink>
           </nav>
         </div>

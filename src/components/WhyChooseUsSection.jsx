@@ -105,7 +105,7 @@ export default function WhyChooseUsSection({ onOpenContact }) {
         <div className="why-choose-header">
           <span className="why-choose-badge">ENTERPRISE ADVANTAGE</span>
           <h2 className="why-choose-title">
-            Why Global Businesses Partner With Legacy Infotech
+            Why Global Businesses Partner With Prestin IT Solutions
           </h2>
           <p className="why-choose-subtitle">
             We combine technical excellence, deep domain expertise, zero-trust security, and agile execution to empower organizations to scale with confidence.

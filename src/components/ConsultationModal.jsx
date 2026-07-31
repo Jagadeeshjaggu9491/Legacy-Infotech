@@ -199,7 +199,7 @@ export default function ConsultationModal({ isOpen, onClose, initialService, onS
             </h3>
 
             <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: 1.6, marginBottom: '1.8rem' }}>
-              Thank you, <strong>{formData.name}</strong>. A Senior Cloud Solutions Architect from Legacy Infotech has been assigned to review your inquiry for <strong>{formData.company || 'your team'}</strong>.
+              Thank you, <strong>{formData.name}</strong>. A Senior Cloud Solutions Architect from Prestin IT Solutions has been assigned to review your inquiry for <strong>{formData.company || 'your team'}</strong>.
             </p>
 
             <div style={{ padding: '1rem', background: 'rgba(255, 255, 255, 0.04)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)', fontSize: '0.88rem', color: 'var(--text-subtle)', marginBottom: '1.8rem' }}>

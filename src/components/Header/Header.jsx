@@ -63,7 +63,7 @@ export default function Header({ onOpenContact }) {
           <Link to="/" ref={logoRef} className="brand-logo-link" onClick={closeDropdown}>
             <img
               src={brandLogo}
-              alt="Legacy Infotech Logo"
+              alt="Prestin IT Solutions Logo"
               style={{
                 height: '46px',
                 width: 'auto',
@@ -180,19 +180,6 @@ export default function Header({ onOpenContact }) {
                   Careers
                 </NavLink>
               </li>
-
-              {/* Blog */}
-              {/* <li className="nav-item">
-                <NavLink
-                  to="/blog"
-                  className={({ isActive }) => `nav-link-item ${isActive ? 'active' : ''}`}
-                  onMouseEnter={(e) => animateNavItemHover(e.currentTarget, true)}
-                  onMouseLeave={(e) => animateNavItemHover(e.currentTarget, false)}
-                  onClick={closeDropdown}
-                >
-                  Blog
-                </NavLink>
-              </li> */}
             </ul>
           </nav>
 

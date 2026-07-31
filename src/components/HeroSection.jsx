@@ -34,7 +34,7 @@ export default function HeroSection({ onOpenContact, onExploreServices }) {
       // Counter animation
       const obj = { v1: 0, v2: 0 };
       gsap.to(obj, {
-        v1: 10,
+        v1: 16,
         v2: 500,
         duration: 2.0,
         ease: 'power2.out',
@@ -70,7 +70,7 @@ export default function HeroSection({ onOpenContact, onExploreServices }) {
             </h1>
 
             <p className="hero-sub-text">
-              Legacy Infotech delivers end-to-end IT and business solutions that empower organizations to innovate, integrate and grow. Driving digital transformation with creativity and technology.
+              Prestin IT Solutions delivers end-to-end IT and business solutions that empower organizations to innovate, integrate and grow. Driving digital transformation with creativity and technology.
             </p>
 
             {/* CTA Buttons */}

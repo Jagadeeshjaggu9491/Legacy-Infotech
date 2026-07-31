@@ -37,7 +37,7 @@ export default function AboutSection({ onOpenContact }) {
   }, []);
 
   const stats = [
-    { icon: Award, value: '10+', label: 'Years Experience' },
+    { icon: Award, value: '16+', label: 'Years Experience (Est. 2008)' },
     { icon: Briefcase, value: '500+', label: 'Successful Projects' },
     { icon: Users, value: '250+', label: 'Happy Clients' },
     { icon: Headphones, value: '24/7', label: 'Technical Support' },
@@ -68,7 +68,7 @@ export default function AboutSection({ onOpenContact }) {
             >
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                alt="Legacy Infotech Engineering Team"
+                alt="Prestin IT Solutions Engineering Team"
                 style={{
                   width: '100%',
                   height: '420px',
@@ -112,10 +112,10 @@ export default function AboutSection({ onOpenContact }) {
               </div>
               <div>
                 <div style={{ fontSize: '0.98rem', fontWeight: 800, color: '#0F172A' }}>
-                  Building Future
+                  Founded in 2008
                 </div>
                 <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#0052CC' }}>
-                  Together
+                  16+ Years Excellence
                 </div>
               </div>
             </div>
@@ -123,14 +123,14 @@ export default function AboutSection({ onOpenContact }) {
 
           {/* Right Column: Text Content & Stats */}
           <div>
-            <span className="section-subtitle">ABOUT LEGACY INFOTECH</span>
+            <span className="section-subtitle">ABOUT PRESTIN IT SOLUTIONS</span>
             <h2 className="section-title" style={{ marginBottom: '1.2rem' }}>
-              Driving Innovation. <br />
-              Delivering Excellence.
+              Driving Innovation Since 2008. <br />
+              Delivering Enterprise Excellence.
             </h2>
 
             <p style={{ color: 'var(--text-muted)', fontSize: '1.02rem', lineHeight: 1.7, marginBottom: '1rem' }}>
-              Legacy Infotech is a trusted technology and business solutions company helping organizations accelerate digital transformation. We provide a wide range of IT and non-IT services that optimize operations, enhance customer experiences and fuel business growth.
+              Founded in 2008, Prestin IT Solutions is a trusted technology and business solutions company helping global organizations accelerate digital transformation. We provide a wide range of IT and non-IT services that optimize operations, enhance customer experiences and fuel business growth.
             </p>
 
             <p style={{ color: 'var(--text-muted)', fontSize: '1.02rem', lineHeight: 1.7, marginBottom: '2rem' }}>
