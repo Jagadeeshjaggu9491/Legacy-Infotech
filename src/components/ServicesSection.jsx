@@ -293,7 +293,7 @@ export default function ServicesSection({ onOpenContact }) {
                   onOpenContact(serviceName);
                 }}
               >
-                <span>Request {selectedService.title} Proposal</span>
+                <span>Request Service</span>
                 <ArrowRight size={18} />
               </button>
               <button className="btn btn-outline-light" onClick={() => setSelectedService(null)}>
