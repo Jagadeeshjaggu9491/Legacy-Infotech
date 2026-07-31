@@ -127,8 +127,8 @@ export default function ServicesPage() {
           </p>
         </div>
 
-        {/* Services Cards Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2.5rem' }}>
+        {/* Services Cards Grid - 3 Cards Per Row */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2.5rem' }}>
           {servicesList.map((service) => {
             const IconComponent = service.icon;
             return (
