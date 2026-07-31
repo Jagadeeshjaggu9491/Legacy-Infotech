@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Plus, Minus } from 'lucide-react';
+import { Plus, Minus, MessageSquare, Headphones } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,7 +58,7 @@ export default function FaqSection() {
     },
     {
       q: '6. How do I get started?',
-      a: 'You can get started by clicking "Contact Us" or contacting us via email/phone. Our technical team will schedule an initial discovery call within 2 hours.'
+      a: 'You can get started by clicking "Contact Us" or contacting us via email/phone. Our technical team will schedule an initial discovery call within 2 business hours.'
     }
   ];
 
@@ -71,12 +71,15 @@ export default function FaqSection() {
           <h2 className="section-title">
             We're Here To Help You
           </h2>
+          <p style={{ color: 'var(--text-muted)', fontSize: '1.02rem', marginTop: '0.8rem' }}>
+            Got questions about our services, engagement models, or technical execution? Find fast answers below.
+          </p>
         </div>
 
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(310px, 1fr))',
             gap: '3.5rem',
             alignItems: 'center'
           }}
@@ -162,50 +165,75 @@ export default function FaqSection() {
             })}
           </div>
 
-          {/* Right Column: Illustration Graphic */}
+          {/* Right Column: Vertical Portrait Support Image */}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div
               style={{
                 position: 'relative',
                 width: '100%',
-                maxWidth: '440px',
-                borderRadius: 'var(--radius-xl)',
+                maxWidth: '420px',
+                borderRadius: '24px',
                 overflow: 'hidden',
-                background: 'linear-gradient(135deg, rgba(0, 82, 204, 0.1), rgba(0, 180, 216, 0.1))',
-                padding: '1.5rem',
-                border: '1px solid var(--border-color)',
-                textAlign: 'center'
+                background: 'linear-gradient(135deg, #0052CC 0%, #0099FF 100%)',
+                padding: '6px',
+                boxShadow: '0 20px 45px rgba(0, 82, 204, 0.15)'
               }}
             >
-              <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
-                alt="Support Representative"
-                style={{
-                  width: '100%',
-                  height: '340px',
-                  objectFit: 'cover',
-                  borderRadius: 'var(--radius-lg)'
-                }}
-              />
-              <div
-                style={{
-                  position: 'absolute',
-                  top: '25px',
-                  right: '25px',
-                  width: '50px',
-                  height: '50px',
-                  borderRadius: '50%',
-                  background: '#0052CC',
-                  color: '#FFF',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  boxShadow: '0 8px 20px rgba(0, 82, 204, 0.4)',
-                  fontSize: '1.4rem',
-                  fontWeight: 900
-                }}
-              >
-                ?
+              <div style={{ position: 'relative', borderRadius: '20px', overflow: 'hidden' }}>
+                <img
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80"
+                  alt="Customer Support & IT Consultation Lead"
+                  style={{
+                    width: '100%',
+                    height: '500px',
+                    objectFit: 'cover',
+                    display: 'block'
+                  }}
+                />
+
+                {/* Floating Support Badge */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: '20px',
+                    left: '20px',
+                    right: '20px',
+                    background: 'rgba(255, 255, 255, 0.92)',
+                    backdropFilter: 'blur(12px)',
+                    WebkitBackdropFilter: 'blur(12px)',
+                    padding: '1.1rem 1.4rem',
+                    borderRadius: '16px',
+                    border: '1px solid rgba(255, 255, 255, 0.8)',
+                    boxShadow: '0 12px 30px rgba(0, 51, 149, 0.2)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '1rem'
+                  }}
+                >
+                  <div
+                    style={{
+                      width: '44px',
+                      height: '44px',
+                      borderRadius: '12px',
+                      background: 'linear-gradient(135deg, #0052CC 0%, #0099FF 100%)',
+                      color: '#FFFFFF',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0
+                    }}
+                  >
+                    <Headphones size={22} />
+                  </div>
+                  <div>
+                    <h4 style={{ fontSize: '0.96rem', fontWeight: 800, color: '#0F172A', margin: 0, lineHeight: 1.2 }}>
+                      24/7 Technical Desk
+                    </h4>
+                    <p style={{ fontSize: '0.82rem', color: '#0052CC', margin: '0.2rem 0 0 0', fontWeight: 600 }}>
+                      Fast 2-Hour Response Time
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
