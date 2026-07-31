@@ -320,3 +320,26 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
+/* Carousel Navigation Arrows Styling */
+.carousel-arrow-btn:hover {
+  background: var(--primary-blue) !important;
+  color: #FFFFFF !important;
+  border-color: var(--primary-blue) !important;
+  transform: translateY(-50%) scale(1.1) !important;
+  box-shadow: 0 8px 24px rgba(0, 82, 204, 0.4) !important;
+}
+
+@media (max-width: 768px) {
+  .carousel-arrow-btn {
+    width: 38px !important;
+    height: 38px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-arrow-btn {
+    display: none !important; /* Hide arrows on small mobile, use swipe & dot indicators */
+  }
+}
+
+
