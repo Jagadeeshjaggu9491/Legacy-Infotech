@@ -67,9 +67,9 @@ export default function BlogPage() {
   return (
     <div ref={pageRef} style={{ paddingTop: '120px', paddingBottom: '6rem', background: '#F8FAFC', color: '#0F172A', minHeight: '100vh' }}>
       <SEO
-        title="Architectural Digest & Tech Insights | Legacy Infotech Blog"
-        description="Engineering insights, cloud FinOps strategies, AI development patterns, and healthcare RCM compliance guides from Legacy Infotech experts."
-        keywords="Legacy Infotech Blog, Micro-Frontends Guide, Healthcare RCM Tips, FinTech AML Architecture, React Engineering Blog"
+        title="Architectural Digest & Tech Insights | Prestin IT Solutions Blog"
+        description="Engineering insights, cloud FinOps strategies, AI development patterns, and healthcare RCM compliance guides from Prestin IT Solutions experts."
+        keywords="Prestin IT Solutions Blog, Micro-Frontends Guide, Healthcare RCM Tips, FinTech AML Architecture, React Engineering Blog"
       />
 
       <div className="container">

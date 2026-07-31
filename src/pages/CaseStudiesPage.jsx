@@ -67,8 +67,8 @@ export default function CaseStudiesPage({ onOpenContact }) {
   return (
     <div ref={pageRef} style={{ paddingTop: '120px', paddingBottom: '6rem', background: '#F8FAFC', color: '#0F172A', minHeight: '100vh' }}>
       <SEO
-        title="Enterprise Case Studies & Success Stories | Legacy Infotech"
-        description="Read how Legacy Infotech engineered high-performance cloud platforms, automated RCM operations, and accelerated digital growth for global clients."
+        title="Enterprise Case Studies & Success Stories | Prestin IT Solutions"
+        description="Read how Prestin IT Solutions engineered high-performance cloud platforms, automated RCM operations, and accelerated digital growth for global clients."
         keywords="Case Studies, RCM Case Study, FinTech AML Success Story, Next.js E-Commerce Transformation, Legacy Refactoring Results"
       />
 

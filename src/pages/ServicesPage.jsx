@@ -108,8 +108,8 @@ export default function ServicesPage() {
   return (
     <div ref={pageRef} style={{ paddingTop: '120px', paddingBottom: '6rem', background: '#F8FAFC', color: '#0F172A', minHeight: '100vh' }}>
       <SEO
-        title="Enterprise IT & Healthcare Services | Legacy Infotech"
-        description="Explore Legacy Infotech's comprehensive IT services: Web & Mobile App Development, UI/UX Design, US Healthcare RCM, Cloud DevOps, CRM Integration, and Financial Compliance."
+        title="Enterprise IT & Healthcare Services | Prestin IT Solutions"
+        description="Explore Prestin IT Solutions' comprehensive IT services: Web & Mobile App Development, UI/UX Design, US Healthcare RCM, Cloud DevOps, CRM Integration, and Financial Compliance."
         keywords="Web Development, Mobile Apps, Healthcare RCM, Cloud DevOps, Salesforce CRM, KYC KYB AML Compliance, AI Engineering"
       />
 

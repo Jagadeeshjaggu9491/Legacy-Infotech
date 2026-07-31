@@ -10,9 +10,9 @@ export default function TermsPage() {
   return (
     <div style={{ paddingTop: '120px', paddingBottom: '6rem', background: '#F8FAFC', color: '#0F172A', minHeight: '100vh' }}>
       <SEO
-        title="Terms & Conditions | Legacy Infotech"
-        description="Terms of service and legal agreement governing IT consulting, software engineering, healthcare RCM, and BPO operations at Legacy Infotech."
-        keywords="Terms and Conditions, Terms of Service, Legacy Infotech Terms, Legal Agreement"
+        title="Terms & Conditions | Prestin IT Solutions"
+        description="Terms of service and legal agreement governing IT consulting, software engineering, healthcare RCM, and BPO operations at Prestin IT Solutions."
+        keywords="Terms and Conditions, Terms of Service, Prestin IT Solutions Terms, Legal Agreement"
       />
 
       <div className="container" style={{ maxWidth: '900px' }}>
@@ -25,7 +25,7 @@ export default function TermsPage() {
             Terms & Conditions
           </h1>
           <p style={{ fontSize: '1.05rem', color: '#64748B' }}>
-            Last Updated: January 2026 | Legacy Infotech / Shreyan IT Solutions
+            Last Updated: January 2026 | Prestin IT Solutions
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export default function TermsPage() {
             1. Agreement to Terms
           </h2>
           <p style={{ marginBottom: '1.5rem' }}>
-            By accessing or using the services provided by Legacy Infotech (Shreyan IT Solutions), you agree to be bound by these Terms and Conditions. If you do not agree to all terms, you must discontinue use of our website and consulting services.
+            By accessing or using the services provided by Prestin IT Solutions, you agree to be bound by these Terms and Conditions. If you do not agree to all terms, you must discontinue use of our website and consulting services.
           </p>
 
           <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.4rem', fontWeight: 700, color: '#0F172A', marginBottom: '1rem' }}>

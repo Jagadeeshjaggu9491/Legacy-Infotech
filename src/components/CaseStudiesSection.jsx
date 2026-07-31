@@ -76,7 +76,7 @@ export default function CaseStudiesSection({ onOpenConsultation }) {
             Real Success Stories, <span className="gradient-text">Quantifiable Results</span>
           </h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', marginTop: '0.75rem' }}>
-            Discover how Legacy Infotech has transformed mission-critical infrastructure for industry leaders worldwide.
+            Discover how Prestin IT Solutions has transformed mission-critical infrastructure for industry leaders worldwide.
           </p>
 
           {/* Filter Bar */}

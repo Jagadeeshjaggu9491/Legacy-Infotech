@@ -128,7 +128,7 @@ export default function IndustriesPage() {
   return (
     <div ref={pageRef} style={{ paddingTop: '120px', paddingBottom: '6rem', background: '#F8FAFC', color: '#0F172A', minHeight: '100vh' }}>
       <SEO
-        title="Industry Solutions | Legacy Infotech"
+        title="Industry Solutions | Prestin IT Solutions"
         description="Tailored software engineering and business operations for Healthcare, Banking & Financial Services, Retail, Education, Manufacturing, Logistics, and Real Estate."
         keywords="Healthcare IT, FinTech Solutions, Retail E-Commerce, Smart Manufacturing, Logistics Software, PropTech Real Estate"
       />

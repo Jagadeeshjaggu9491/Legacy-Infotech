@@ -71,16 +71,16 @@ export default function CareersPage({ onOpenContact }) {
   return (
     <div ref={pageRef} style={{ paddingTop: '120px', paddingBottom: '6rem', background: '#F8FAFC', color: '#0F172A', minHeight: '100vh' }}>
       <SEO
-        title="Careers & Open Jobs | Join Legacy Infotech"
-        description="Build the future of enterprise software, AI models, and cloud systems. Explore open jobs and career opportunities at Legacy Infotech Madhapur, Hyderabad."
-        keywords="Careers Legacy Infotech, IT Jobs Hyderabad, React Developer Openings, Healthcare RCM Jobs, Cloud Architect Jobs"
+        title="Careers & Open Jobs | Join Prestin IT Solutions"
+        description="Build the future of enterprise software, AI models, and cloud systems. Explore open jobs and career opportunities at Prestin IT Solutions Madhapur, Hyderabad."
+        keywords="Careers Prestin IT Solutions, IT Jobs Hyderabad, React Developer Openings, Healthcare RCM Jobs, Cloud Architect Jobs"
       />
 
       <div className="container">
         {/* Page Hero Header */}
         <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem auto' }}>
           <span style={{ fontFamily: "'Sora', sans-serif", fontSize: '0.85rem', fontWeight: 800, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#0052CC', marginBottom: '0.6rem', display: 'block' }}>
-            CAREERS AT LEGACY INFOTECH
+            CAREERS AT PRESTIN IT SOLUTIONS
           </span>
           <h1 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', fontWeight: 800, marginBottom: '1.2rem', color: '#0F172A' }}>
             Build the Future of Enterprise Technology

@@ -43,7 +43,7 @@ export default function WhyUsSection({ onOpenConsultation }) {
         <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 3.5rem auto' }}>
           <div className="badge badge-emerald" style={{ marginBottom: '0.8rem' }}>
             <Award size={14} />
-            <span>Why Legacy Infotech</span>
+            <span>Why Prestin IT Solutions</span>
           </div>
           <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 800 }}>
             Engineering Standards <span className="gradient-text">Without Compromise</span>

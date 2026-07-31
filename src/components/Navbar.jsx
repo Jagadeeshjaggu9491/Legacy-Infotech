@@ -66,14 +66,14 @@ export default function Navbar({ theme, toggleTheme, onOpenContact }) {
               boxShadow: '0 0 16px rgba(88, 37, 228, 0.5)'
             }}
           >
-            L
+            P
           </div>
           <div>
             <div style={{ fontSize: '1.25rem', fontWeight: 800, letterSpacing: '0.04em', lineHeight: 1 }}>
-              LEGACY
+              PRESTIN
             </div>
             <div style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', color: '#94A3B8' }}>
-              INFOTECH
+              IT SOLUTIONS
             </div>
           </div>
         </a>

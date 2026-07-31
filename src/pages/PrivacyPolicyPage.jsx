@@ -10,9 +10,9 @@ export default function PrivacyPolicyPage() {
   return (
     <div style={{ paddingTop: '120px', paddingBottom: '6rem', background: '#F8FAFC', color: '#0F172A', minHeight: '100vh' }}>
       <SEO
-        title="Privacy Policy & Data Protection | Legacy Infotech"
-        description="Our commitment to data governance, SOC2 Type II compliance, HIPAA security standards, and privacy protection at Legacy Infotech."
-        keywords="Privacy Policy, Data Protection, Legacy Infotech Privacy, SOC2 Compliance, HIPAA Data Security"
+        title="Privacy Policy & Data Protection | Prestin IT Solutions"
+        description="Our commitment to data governance, SOC2 Type II compliance, HIPAA security standards, and privacy protection at Prestin IT Solutions."
+        keywords="Privacy Policy, Data Protection, Prestin IT Solutions Privacy, SOC2 Compliance, HIPAA Data Security"
       />
 
       <div className="container" style={{ maxWidth: '900px' }}>
@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p style={{ fontSize: '1.05rem', color: '#64748B' }}>
-            Last Updated: January 2026 | Legacy Infotech / Shreyan IT Solutions
+            Last Updated: January 2026 | Prestin IT Solutions
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
             1. Information We Collect
           </h2>
           <p style={{ marginBottom: '1.5rem' }}>
-            At Legacy Infotech, we respect your privacy and are committed to protecting your personal data. We collect information necessary to provide software engineering, healthcare RCM, CRM, and enterprise technology services. This includes contact information provided via inquiries, technical log data, and communication preferences.
+            At Prestin IT Solutions, we respect your privacy and are committed to protecting your personal data. We collect information necessary to provide software engineering, healthcare RCM, CRM, and enterprise technology services. This includes contact information provided via inquiries, technical log data, and communication preferences.
           </p>
 
           <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.4rem', fontWeight: 700, color: '#0F172A', marginBottom: '1rem' }}>

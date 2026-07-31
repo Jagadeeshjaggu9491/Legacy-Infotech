@@ -94,7 +94,7 @@ export default function CtaBanner({ onOpenContact }) {
             </h2>
 
             <p style={{ fontSize: '1.05rem', color: '#E0F2FE', lineHeight: 1.6, margin: 0 }}>
-              Partner with Legacy Infotech to architect resilient software, automate complex operations, and achieve long-term digital growth.
+              Partner with Prestin IT Solutions to architect resilient software, automate complex operations, and achieve long-term digital growth.
             </p>
           </div>
 
