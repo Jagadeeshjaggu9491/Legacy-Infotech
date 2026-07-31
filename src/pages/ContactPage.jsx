@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, CheckCircle2 } from 'lucide-react';
 import SEO from '../components/SEO';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -72,9 +72,9 @@ export default function ContactPage() {
   return (
     <div ref={pageRef} style={{ paddingTop: '120px', paddingBottom: '6rem', background: '#F8FAFC', color: '#0F172A', minHeight: '100vh' }}>
       <SEO
-        title="Contact Us | Legacy Infotech - Madhapur, Hyderabad"
-        description="Get in touch with Legacy Infotech. Located at Unit 407, Jain Sadguru Images Capital Park, Madhapur, Hyderabad. Call +91 91001 20409 or email info@prestinit.in."
-        keywords="Contact Legacy Infotech, Madhapur Office Address, Hyderabad IT Company Phone, Software Consultation Inquiry"
+        title="Contact Us | Prestin IT Solutions - Hyderabad & Bangalore"
+        description="Get in touch with Prestin IT Solutions. Offices in Madhapur, Hyderabad and Hebbal, Bangalore. Call +91 91001 20409 or email info@prestinit.in."
+        keywords="Contact Prestin IT Solutions, Madhapur Hyderabad Address, Bangalore Hebbal Address, IT Company Phone Email"
       />
 
       <div className="container">
@@ -93,18 +93,19 @@ export default function ContactPage() {
 
         {/* Contact Form & Info Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '3rem', marginBottom: '5rem' }}>
-          {/* Left Column: Contact Form */}
+          {/* Left Column: Premium Dark Gradient Contact Form */}
           <div
             className="animate-on-entry"
             style={{
-              background: '#FFFFFF',
+              background: 'linear-gradient(135deg, #050E1F 0%, #081B3B 50%, #050E1F 100%)',
               borderRadius: '24px',
               padding: '2.5rem',
-              border: '1px solid #E2E8F0',
-              boxShadow: '0 15px 35px rgba(0, 51, 149, 0.08)'
+              border: '1px solid rgba(0, 180, 216, 0.3)',
+              boxShadow: '0 20px 40px rgba(5, 14, 31, 0.35)',
+              color: '#FFFFFF'
             }}
           >
-            <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.6rem', fontWeight: 700, marginBottom: '1.5rem', color: '#0F172A' }}>
+            <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.6rem', fontWeight: 700, marginBottom: '1.5rem', color: '#FFFFFF' }}>
               Send Us a Message
             </h2>
 
@@ -112,18 +113,18 @@ export default function ContactPage() {
               <div
                 style={{
                   padding: '2rem',
-                  background: '#F0FDF4',
-                  border: '1px solid #BBF7D0',
+                  background: 'rgba(16, 185, 129, 0.15)',
+                  border: '1px solid rgba(16, 185, 129, 0.4)',
                   borderRadius: '16px',
-                  color: '#166534',
+                  color: '#34D399',
                   textAlign: 'center'
                 }}
               >
-                <CheckCircle2 size={42} color="#16A34A" style={{ marginBottom: '1rem' }} />
-                <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>
+                <CheckCircle2 size={42} color="#34D399" style={{ marginBottom: '1rem' }} />
+                <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem', color: '#FFFFFF' }}>
                   Thank You for Reaching Out!
                 </h3>
-                <p style={{ fontSize: '0.95rem', color: '#15803D' }}>
+                <p style={{ fontSize: '0.95rem', color: '#CBD5E1' }}>
                   Your inquiry has been received successfully. One of our technical leads will contact you within 24 business hours.
                 </p>
               </div>
@@ -131,7 +132,7 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.2rem', marginBottom: '1.2rem' }}>
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 600, color: '#334155', marginBottom: '0.4rem' }}>
+                    <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 600, color: '#E2E8F0', marginBottom: '0.4rem' }}>
                       Full Name *
                     </label>
                     <input
@@ -141,12 +142,21 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="John Doe"
-                      className="form-input"
+                      style={{
+                        width: '100%',
+                        padding: '0.75rem 1rem',
+                        borderRadius: '12px',
+                        background: 'rgba(255, 255, 255, 0.08)',
+                        border: '1px solid rgba(255, 255, 255, 0.2)',
+                        color: '#FFFFFF',
+                        fontSize: '0.94rem',
+                        outline: 'none'
+                      }}
                     />
                   </div>
 
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 600, color: '#334155', marginBottom: '0.4rem' }}>
+                    <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 600, color: '#E2E8F0', marginBottom: '0.4rem' }}>
                       Email Address *
                     </label>
                     <input
@@ -156,14 +166,23 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="john@company.com"
-                      className="form-input"
+                      style={{
+                        width: '100%',
+                        padding: '0.75rem 1rem',
+                        borderRadius: '12px',
+                        background: 'rgba(255, 255, 255, 0.08)',
+                        border: '1px solid rgba(255, 255, 255, 0.2)',
+                        color: '#FFFFFF',
+                        fontSize: '0.94rem',
+                        outline: 'none'
+                      }}
                     />
                   </div>
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.2rem', marginBottom: '1.2rem' }}>
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 600, color: '#334155', marginBottom: '0.4rem' }}>
+                    <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 600, color: '#E2E8F0', marginBottom: '0.4rem' }}>
                       Phone Number
                     </label>
                     <input
@@ -172,32 +191,50 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+91 91001 20409"
-                      className="form-input"
+                      style={{
+                        width: '100%',
+                        padding: '0.75rem 1rem',
+                        borderRadius: '12px',
+                        background: 'rgba(255, 255, 255, 0.08)',
+                        border: '1px solid rgba(255, 255, 255, 0.2)',
+                        color: '#FFFFFF',
+                        fontSize: '0.94rem',
+                        outline: 'none'
+                      }}
                     />
                   </div>
 
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 600, color: '#334155', marginBottom: '0.4rem' }}>
+                    <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 600, color: '#E2E8F0', marginBottom: '0.4rem' }}>
                       Service Required
                     </label>
                     <select
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="form-select"
+                      style={{
+                        width: '100%',
+                        padding: '0.75rem 1rem',
+                        borderRadius: '12px',
+                        background: '#081B3B',
+                        border: '1px solid rgba(255, 255, 255, 0.2)',
+                        color: '#FFFFFF',
+                        fontSize: '0.94rem',
+                        outline: 'none'
+                      }}
                     >
-                      <option value="IT Solutions">IT Solutions & Software</option>
-                      <option value="US Healthcare">US Healthcare & RCM</option>
-                      <option value="CRM Services">CRM Services (Salesforce & Zoho)</option>
-                      <option value="BPO Services">BPO & Call Center</option>
-                      <option value="Banking & Financial">Banking & Financial Services</option>
-                      <option value="Back Office Support">Back Office Support</option>
+                      <option value="IT Solutions" style={{ color: '#0F172A', background: '#FFFFFF' }}>IT Solutions & Software</option>
+                      <option value="US Healthcare" style={{ color: '#0F172A', background: '#FFFFFF' }}>US Healthcare & RCM</option>
+                      <option value="CRM Services" style={{ color: '#0F172A', background: '#FFFFFF' }}>CRM Services (Salesforce & Zoho)</option>
+                      <option value="BPO Services" style={{ color: '#0F172A', background: '#FFFFFF' }}>BPO & Call Center</option>
+                      <option value="Banking & Financial" style={{ color: '#0F172A', background: '#FFFFFF' }}>Banking & Financial Services</option>
+                      <option value="Back Office Support" style={{ color: '#0F172A', background: '#FFFFFF' }}>Back Office Support</option>
                     </select>
                   </div>
                 </div>
 
                 <div style={{ marginBottom: '1.2rem' }}>
-                  <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 600, color: '#334155', marginBottom: '0.4rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 600, color: '#E2E8F0', marginBottom: '0.4rem' }}>
                     Subject *
                   </label>
                   <input
@@ -207,12 +244,21 @@ export default function ContactPage() {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="Project Inquiry / Consultation"
-                    className="form-input"
+                    style={{
+                      width: '100%',
+                      padding: '0.75rem 1rem',
+                      borderRadius: '12px',
+                      background: 'rgba(255, 255, 255, 0.08)',
+                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                      color: '#FFFFFF',
+                      fontSize: '0.94rem',
+                      outline: 'none'
+                    }}
                   />
                 </div>
 
                 <div style={{ marginBottom: '1.8rem' }}>
-                  <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 600, color: '#334155', marginBottom: '0.4rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 600, color: '#E2E8F0', marginBottom: '0.4rem' }}>
                     Message *
                   </label>
                   <textarea
@@ -222,14 +268,38 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us about your project requirements or goals..."
-                    className="form-textarea"
+                    style={{
+                      width: '100%',
+                      padding: '0.75rem 1rem',
+                      borderRadius: '12px',
+                      background: 'rgba(255, 255, 255, 0.08)',
+                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                      color: '#FFFFFF',
+                      fontSize: '0.94rem',
+                      outline: 'none'
+                    }}
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="btn btn-purple"
-                  style={{ width: '100%', padding: '0.9rem', fontSize: '1rem' }}
+                  style={{
+                    width: '100%',
+                    padding: '0.95rem',
+                    fontSize: '1rem',
+                    fontWeight: 700,
+                    borderRadius: '12px',
+                    background: 'linear-gradient(135deg, #0052CC 0%, #0099FF 100%)',
+                    color: '#FFFFFF',
+                    border: 'none',
+                    boxShadow: '0 8px 25px rgba(0, 153, 255, 0.35)',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.6rem',
+                    transition: 'all 0.3s ease'
+                  }}
                 >
                   <span>Submit Inquiry</span>
                   <Send size={18} />
@@ -238,8 +308,9 @@ export default function ContactPage() {
             )}
           </div>
 
-          {/* Right Column: Exact Office Address Details */}
+          {/* Right Column: Office Addresses & Contact Info */}
           <div className="animate-on-entry" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            {/* Hyderabad Corporate Office */}
             <div
               style={{
                 background: '#FFFFFF',
@@ -257,16 +328,45 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.15rem', fontWeight: 700, color: '#0F172A', marginBottom: '0.3rem' }}>
-                  Corporate Office Address
+                  Hyderabad Office (Corporate HQ)
                 </h3>
                 <p style={{ fontSize: '0.94rem', color: '#475569', lineHeight: 1.6, margin: 0, fontWeight: 500 }}>
-                  <strong>Shreyan IT Solutions / Legacy Infotech</strong><br />
+                  <strong>Prestin IT Solutions</strong><br />
                   Unit No.407, 4th Floor, Jain Sadguru Images Capital Park,<br />
                   Image Gardens Rd, Madhapur, Hyderabad-81, Telangana, India.
                 </p>
               </div>
             </div>
 
+            {/* Bangalore Office */}
+            <div
+              style={{
+                background: '#FFFFFF',
+                borderRadius: '20px',
+                padding: '1.8rem',
+                border: '1px solid #E2E8F0',
+                boxShadow: '0 8px 25px rgba(0, 82, 204, 0.05)',
+                display: 'flex',
+                alignItems: 'flex-start',
+                gap: '1.2rem'
+              }}
+            >
+              <div style={{ width: '50px', height: '50px', borderRadius: '16px', background: 'rgba(16, 185, 129, 0.1)', color: '#10B981', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <MapPin size={26} />
+              </div>
+              <div>
+                <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.15rem', fontWeight: 700, color: '#0F172A', marginBottom: '0.3rem' }}>
+                  Bangalore Office
+                </h3>
+                <p style={{ fontSize: '0.94rem', color: '#475569', lineHeight: 1.6, margin: 0, fontWeight: 500 }}>
+                  <strong>Prestin IT Solutions</strong><br />
+                  2nd Cross, near Ayyappa Temple, Kempapura,<br />
+                  Hebbal, Bangalore - 560024, Karnataka, India.
+                </p>
+              </div>
+            </div>
+
+            {/* Phone Number */}
             <div
               style={{
                 background: '#FFFFFF',
@@ -294,6 +394,7 @@ export default function ContactPage() {
               </div>
             </div>
 
+            {/* Email Address */}
             <div
               style={{
                 background: '#FFFFFF',
@@ -320,48 +421,47 @@ export default function ContactPage() {
                 </p>
               </div>
             </div>
-
-            <div
-              style={{
-                background: '#FFFFFF',
-                borderRadius: '20px',
-                padding: '1.8rem',
-                border: '1px solid #E2E8F0',
-                boxShadow: '0 8px 25px rgba(0, 82, 204, 0.05)',
-                display: 'flex',
-                alignItems: 'flex-start',
-                gap: '1.2rem'
-              }}
-            >
-              <div style={{ width: '50px', height: '50px', borderRadius: '16px', background: 'rgba(16, 185, 129, 0.1)', color: '#10B981', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <Clock size={26} />
-              </div>
-              <div>
-                <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.15rem', fontWeight: 700, color: '#0F172A', marginBottom: '0.3rem' }}>
-                  Business Hours
-                </h3>
-                <p style={{ fontSize: '0.94rem', color: '#475569', lineHeight: 1.6, margin: 0 }}>
-                  Monday - Friday: 9:00 AM - 6:00 PM IST<br />
-                  24/7 Technical Support Available
-                </p>
-              </div>
-            </div>
           </div>
         </div>
 
-        {/* Embedded Google Map Section for 17°26'47.1"N 78°23'11.7"E (Jain Sadguru Images Capital Park) */}
-        <div className="animate-on-entry" style={{ background: '#FFFFFF', borderRadius: '24px', padding: '1.5rem', border: '1px solid #E2E8F0', boxShadow: '0 15px 35px rgba(0, 51, 149, 0.08)' }}>
-          <div style={{ width: '100%', height: '450px', borderRadius: '18px', overflow: 'hidden' }}>
-            <iframe
-              title="Exact Google Map Location Pin"
-              src="https://maps.google.com/maps?q=17.4464217,78.3865885&z=17&output=embed"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+        {/* Dual Office Embedded Google Maps Section */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
+          {/* Hyderabad HQ Map */}
+          <div className="animate-on-entry" style={{ background: '#FFFFFF', borderRadius: '24px', padding: '1.5rem', border: '1px solid #E2E8F0', boxShadow: '0 15px 35px rgba(0, 51, 149, 0.08)' }}>
+            <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.2rem', fontWeight: 700, color: '#0F172A', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <MapPin size={20} color="#0052CC" /> Hyderabad Office (Corporate HQ)
+            </h3>
+            <div style={{ width: '100%', height: '380px', borderRadius: '18px', overflow: 'hidden' }}>
+              <iframe
+                title="Hyderabad Office Google Map"
+                src="https://maps.google.com/maps?q=17.4464217,78.3865885&z=17&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+          {/* Bangalore Office Map */}
+          <div className="animate-on-entry" style={{ background: '#FFFFFF', borderRadius: '24px', padding: '1.5rem', border: '1px solid #E2E8F0', boxShadow: '0 15px 35px rgba(0, 51, 149, 0.08)' }}>
+            <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.2rem', fontWeight: 700, color: '#0F172A', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <MapPin size={20} color="#10B981" /> Bangalore Office
+            </h3>
+            <div style={{ width: '100%', height: '380px', borderRadius: '18px', overflow: 'hidden' }}>
+              <iframe
+                title="Bangalore Office Google Map"
+                src="https://maps.google.com/maps?q=2nd+Cross,+near+Ayyappa+Temple,+Kempapura,+Hebbal,+Bangalore+560024&z=15&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
