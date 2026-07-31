@@ -128,7 +128,7 @@ export default function ServicesPage() {
         </div>
 
         {/* Services Cards Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', gap: '2.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2.5rem' }}>
           {servicesList.map((service) => {
             const IconComponent = service.icon;
             return (
@@ -173,7 +173,7 @@ export default function ServicesPage() {
                     {service.desc}
                   </p>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.6rem', marginBottom: '1.8rem', background: '#F8FAFC', padding: '1rem', borderRadius: '14px', border: '1px solid #F1F5F9' }}>
+                  <div className="responsive-deliverables-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.6rem', marginBottom: '1.8rem', background: '#F8FAFC', padding: '1rem', borderRadius: '14px', border: '1px solid #F1F5F9' }}>
                     {service.deliverables.map((item, idx) => (
                       <div key={idx} style={{ fontSize: '0.78rem', fontWeight: 600, color: '#334155', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                         <CheckCircle2 size={14} color="#0052CC" style={{ flexShrink: 0 }} />

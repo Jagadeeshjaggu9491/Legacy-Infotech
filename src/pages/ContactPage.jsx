@@ -149,14 +149,14 @@ export default function ContactPage() {
         </div>
 
         {/* Contact Form & Info Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '3rem', marginBottom: '5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))', gap: '2.5rem', marginBottom: '4rem' }}>
           {/* Left Column: Premium Dark Gradient Contact Form */}
           <div
             className="animate-on-entry"
             style={{
               background: 'linear-gradient(135deg, #050E1F 0%, #081B3B 50%, #050E1F 100%)',
               borderRadius: '24px',
-              padding: '2.5rem',
+              padding: '2rem 1.8rem',
               border: '1px solid rgba(0, 180, 216, 0.3)',
               boxShadow: '0 20px 40px rgba(5, 14, 31, 0.35)',
               color: '#FFFFFF'
@@ -207,7 +207,7 @@ export default function ContactPage() {
                   </div>
                 )}
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.2rem', marginBottom: '1.2rem' }}>
+                <div className="responsive-form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.2rem', marginBottom: '1.2rem' }}>
                   <div>
                     <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 600, color: '#E2E8F0', marginBottom: '0.4rem' }}>
                       Full Name *
@@ -257,7 +257,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.2rem', marginBottom: '1.2rem' }}>
+                <div className="responsive-form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.2rem', marginBottom: '1.2rem' }}>
                   <div>
                     <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 600, color: '#E2E8F0', marginBottom: '0.4rem' }}>
                       Phone Number
@@ -513,7 +513,7 @@ export default function ContactPage() {
         </div>
 
         {/* Dual Office Embedded Google Maps Section */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
           {/* Hyderabad HQ Map */}
           <div className="animate-on-entry" style={{ background: '#FFFFFF', borderRadius: '24px', padding: '1.5rem', border: '1px solid #E2E8F0', boxShadow: '0 15px 35px rgba(0, 51, 149, 0.08)' }}>
             <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.2rem', fontWeight: 700, color: '#0F172A', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>

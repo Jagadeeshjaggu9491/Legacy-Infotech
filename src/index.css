@@ -255,3 +255,68 @@ h1, h2, h3, h4, h5, h6,
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-blue);
 }
+
+/* ==========================================
+   Responsive Utilities & Breakpoints
+   ========================================== */
+
+/* Tablet & Smaller Screens (<= 992px) */
+@media (max-width: 992px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .service-card {
+    padding: 1.8rem 1.5rem;
+  }
+}
+
+/* Mobile Devices (<= 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .modal-overlay {
+    padding: 0.75rem;
+  }
+
+  .modal-content {
+    padding: 1.8rem 1.25rem !important;
+    border-radius: 20px !important;
+    max-height: 92vh;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 5vw, 2.2rem) !important;
+  }
+
+  .btn {
+    padding: 0.75rem 1.4rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Mobile Screens (<= 576px) */
+@media (max-width: 576px) {
+  .container {
+    padding: 0 0.9rem;
+  }
+
+  /* Force 2-column form rows to stack into 1 column on mobile */
+  .responsive-form-grid,
+  .form-grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 0.8rem !important;
+  }
+
+  /* Deliverables list 1-column stack */
+  .responsive-deliverables-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .modal-content {
+    padding: 1.5rem 1rem !important;
+  }
+}
+

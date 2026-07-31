@@ -148,7 +148,7 @@ export default function IndustriesPage() {
         </div>
 
         {/* Industry Cards Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', gap: '2.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2.5rem' }}>
           {industriesList.map((ind) => {
             const IconComponent = ind.icon;
             return (

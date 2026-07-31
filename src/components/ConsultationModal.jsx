@@ -106,7 +106,7 @@ export default function ConsultationModal({ isOpen, onClose, initialService, onS
             </p>
 
             <form onSubmit={handleSubmit}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div className="responsive-form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div className="form-group">
                   <label className="form-label">Full Name *</label>
                   <input
@@ -131,7 +131,7 @@ export default function ConsultationModal({ isOpen, onClose, initialService, onS
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div className="responsive-form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div className="form-group">
                   <label className="form-label">Company / Organization</label>
                   <input
