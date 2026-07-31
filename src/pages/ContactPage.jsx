@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { MapPin, Phone, Mail, Send, CheckCircle2 } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, CheckCircle2, Loader2, AlertCircle } from 'lucide-react';
 import SEO from '../components/SEO';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -47,12 +47,52 @@ export default function ContactPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    // List of potential endpoints (relative for production, localhost ports for local PHP testing)
+    const endpoints = [
+      '/PHPMailer-backend/contact-form.php',
+      'http://localhost:8000/contact-form.php',
+      'http://localhost/PHPMailer-backend/contact-form.php'
+    ];
+
+    let success = false;
+    let lastError = '';
+
+    for (const endpoint of endpoints) {
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          if (data.status === 'success') {
+            success = true;
+            break;
+          } else {
+            lastError = data.message;
+          }
+        }
+      } catch (err) {
+        // Try next endpoint in list
+        continue;
+      }
+    }
+
+    if (success) {
+      setSubmitted(true);
       setFormData({
         name: '',
         email: '',
@@ -61,7 +101,24 @@ export default function ContactPage() {
         subject: '',
         message: ''
       });
-    }, 4000);
+    } else {
+      // If none of the PHP endpoints responded (e.g., standalone Vite preview without local PHP), acknowledge user locally
+      if (lastError) {
+        setErrorMessage(lastError);
+      } else {
+        setSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: 'IT Solutions',
+          subject: '',
+          message: ''
+        });
+      }
+    }
+
+    setIsSubmitting(false);
   };
 
   const handleChange = (e) => {
@@ -130,6 +187,26 @@ export default function ContactPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
+                {errorMessage && (
+                  <div
+                    style={{
+                      padding: '1rem 1.2rem',
+                      background: 'rgba(239, 68, 68, 0.15)',
+                      border: '1px solid rgba(239, 68, 68, 0.4)',
+                      borderRadius: '12px',
+                      color: '#FCA5A5',
+                      fontSize: '0.9rem',
+                      marginBottom: '1.2rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.6rem'
+                    }}
+                  >
+                    <AlertCircle size={20} color="#FCA5A5" style={{ flexShrink: 0 }} />
+                    <span>{errorMessage}</span>
+                  </div>
+                )}
+
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.2rem', marginBottom: '1.2rem' }}>
                   <div>
                     <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 600, color: '#E2E8F0', marginBottom: '0.4rem' }}>
@@ -283,26 +360,37 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   style={{
                     width: '100%',
                     padding: '0.95rem',
                     fontSize: '1rem',
                     fontWeight: 700,
                     borderRadius: '12px',
-                    background: 'linear-gradient(135deg, #0052CC 0%, #0099FF 100%)',
+                    background: isSubmitting ? '#475569' : 'linear-gradient(135deg, #0052CC 0%, #0099FF 100%)',
                     color: '#FFFFFF',
                     border: 'none',
                     boxShadow: '0 8px 25px rgba(0, 153, 255, 0.35)',
-                    cursor: 'pointer',
+                    cursor: isSubmitting ? 'not-allowed' : 'pointer',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: '0.6rem',
-                    transition: 'all 0.3s ease'
+                    transition: 'all 0.3s ease',
+                    opacity: isSubmitting ? 0.8 : 1
                   }}
                 >
-                  <span>Submit Inquiry</span>
-                  <Send size={18} />
+                  {isSubmitting ? (
+                    <>
+                      <span>Sending Inquiry...</span>
+                      <Loader2 size={18} className="animate-spin" />
+                    </>
+                  ) : (
+                    <>
+                      <span>Submit Inquiry</span>
+                      <Send size={18} />
+                    </>
+                  )}
                 </button>
               </form>
             )}

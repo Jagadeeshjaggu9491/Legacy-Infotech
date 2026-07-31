@@ -4,12 +4,9 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   Code,
-  Smartphone,
-  Layout,
   Heart,
   Users,
-  Cloud,
-  Cpu,
+  Headphones,
   Landmark,
   FileText,
   ArrowRight,
@@ -53,85 +50,58 @@ export default function ServicesPage() {
 
   const servicesList = [
     {
-      id: 'web-dev',
-      title: 'Web Application Development',
+      id: 'it-solutions',
+      title: 'IT Solutions & Software',
       badge: 'Software Engineering',
-      desc: 'High-performance React, Next.js, and Node.js web applications engineered for enterprise scale, security, and real-time responsiveness.',
+      desc: 'End-to-end custom software development, high-performance web applications, cross-platform mobile apps, cloud architecture, and legacy enterprise software modernization.',
       img: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
       icon: Code,
-      deliverables: ['Custom Micro-Frontends', 'Single Page Apps (SPA)', 'REST & GraphQL APIs', 'Performance Optimization']
+      deliverables: ['Custom Web & Enterprise Software', 'iOS & Android Mobile Applications', 'Cloud Infrastructure & Modernization', 'API Engineering & Integration']
     },
     {
-      id: 'mobile-dev',
-      title: 'Mobile App Development',
-      badge: 'iOS & Android',
-      desc: 'Native and cross-platform mobile apps built with React Native and Flutter, delivering intuitive UX and offline capabilities.',
-      img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80',
-      icon: Smartphone,
-      deliverables: ['Cross-Platform Development', 'Native iOS & Android', 'Biometric & Push Security', 'App Store Deployment']
-    },
-    {
-      id: 'ui-ux',
-      title: 'UI/UX Design Systems',
-      badge: 'Product Design',
-      desc: 'Human-centered user experience design, wireframing, interactive prototyping, and enterprise design system development.',
-      img: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80',
-      icon: Layout,
-      deliverables: ['Design Systems & Token Libraries', 'Figma Prototypes & Wireframes', 'User Journey Mapping', 'Usability Testing']
-    },
-    {
-      id: 'healthcare',
-      title: 'US Healthcare Solutions & RCM',
+      id: 'us-healthcare',
+      title: 'US Healthcare & RCM',
       badge: 'HIPAA Compliant',
-      desc: 'Revenue cycle management, medical coding, billing accuracy, dental practice management, and EHR integration for US healthcare.',
+      desc: 'Comprehensive revenue cycle management (RCM), medical coding, billing accuracy, AR follow-up, denial management, and dental practice support for US healthcare providers.',
       img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
       icon: Heart,
-      deliverables: ['End-to-End RCM Operations', 'Medical Billing & Coding', 'AR Follow-Up & Denials', 'EHR & Telemedicine Systems']
+      deliverables: ['End-to-End Revenue Cycle Management', 'Medical Coding & Billing Accuracy', 'AR Follow-Up & Denial Management', 'Dental Practice Billing Support']
     },
     {
-      id: 'crm',
-      title: 'CRM Implementation & Support',
+      id: 'crm-services',
+      title: 'CRM Services',
       badge: 'Salesforce & Zoho',
-      desc: 'Tailored CRM pipeline automation, lead routing, customer engagement portals, and custom dashboard analytics.',
+      desc: 'Maximize customer engagement and sales team productivity with tailored CRM integrations, lead routing automation, custom dashboards across Salesforce, Zoho, and HubSpot.',
       img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80',
       icon: Users,
-      deliverables: ['Salesforce & Zoho Customization', 'Automated Lead Workflows', 'HubSpot Marketing Hub', 'Legacy CRM Data Migration']
+      deliverables: ['Salesforce & Zoho Customization', 'Automated Lead Workflows & Bots', 'HubSpot Marketing Hub Integration', 'Legacy CRM Data Migration']
     },
     {
-      id: 'cloud',
-      title: 'Cloud Architecture & DevOps',
-      badge: 'AWS & Azure',
-      desc: 'Multi-cloud infrastructure, automated CI/CD pipelines, Kubernetes container orchestration, and 24/7 cloud monitoring.',
-      img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80',
-      icon: Cloud,
-      deliverables: ['Cloud Migration & Architecture', 'CI/CD Pipeline Automation', 'Kubernetes Orchestration', '24/7 Cloud Security Operations']
+      id: 'bpo-services',
+      title: 'BPO & Call Center Services',
+      badge: '24/7 Helpdesk',
+      desc: '24/7 omnichannel customer experience and call center support. Providing multilingual voice, email, live chat, and L1/L2 technical helpdesk operations for global enterprises.',
+      img: 'https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=800&q=80',
+      icon: Headphones,
+      deliverables: ['Inbound & Outbound Customer Support', '24/7 Technical Helpdesk & L1/L2 Desk', 'Omnichannel Live Chat & Email', 'Quality Assurance & Customer Feedback']
     },
     {
-      id: 'banking-finance',
+      id: 'banking-financial-services',
       title: 'Banking & Financial Services',
       badge: 'FinTech Compliance',
-      desc: 'KYC, KYB, Anti-Money Laundering (AML), real-time transaction monitoring, and automated sanctions screening solutions for banks.',
+      desc: 'Robust financial compliance and risk management solutions for global banking institutions. Implementing automated KYC, KYB, AML engines, and transaction monitoring.',
       img: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80',
       icon: Landmark,
       deliverables: ['KYC (Know Your Customer)', 'KYB (Know Your Business)', 'AML (Anti-Money Laundering)', 'Transaction Monitoring & Sanctions']
     },
     {
-      id: 'ai-automation',
-      title: 'AI Engineering & Automation',
-      badge: 'Generative AI & LLMs',
-      desc: 'Private LLM deployment, intelligent document processing, robotic process automation (RPA), and predictive business analytics.',
-      img: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80',
-      icon: Cpu,
-      deliverables: ['Private LLM Engineering', 'Document AI & OCR', 'RPA Workflow Automation', 'Predictive Analytics Models']
-    },
-    {
-      id: 'back-office',
-      title: 'Back Office Support & BPO',
+      id: 'back-office-support',
+      title: 'Back Office Support',
       badge: 'Operations Support',
-      desc: '24/7 omnichannel customer helpdesk, virtual assistance, bookkeeping, and high-accuracy administrative operations.',
-      img: 'https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=800&q=80',
+      desc: 'Streamline administrative processes with back office outsourcing. High-accuracy data entry, document indexing, virtual accounting, bookkeeping, and dedicated virtual assistants.',
+      img: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80',
       icon: FileText,
-      deliverables: ['24/7 Helpdesk & L1/L2 Desk', 'High-Accuracy Data Indexing', 'Accounting & Bookkeeping', 'Virtual Administrative Assistants']
+      deliverables: ['High-Accuracy Data Entry & Indexing', 'Virtual Accounting & Bookkeeping', 'HR Payroll & Administrative Support', 'Document Processing & Virtual Assistants']
     }
   ];
 

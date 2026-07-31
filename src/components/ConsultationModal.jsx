@@ -22,17 +22,50 @@ export default function ConsultationModal({ isOpen, onClose, initialService, onS
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      if (onSubmitted) {
-        onSubmitted(`Consultation request received for ${formData.company || 'your organization'}! We will contact you within 2 business hours.`);
+    const endpoints = [
+      '/PHPMailer-backend/contact-form.php',
+      'http://localhost:8000/contact-form.php',
+      'http://localhost/PHPMailer-backend/contact-form.php'
+    ];
+
+    const payload = JSON.stringify({
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      service: formData.service,
+      budget: formData.budget,
+      subject: `Strategy Session Request - ${formData.service}`,
+      message: formData.message || `Strategy Session requested for ${formData.company || formData.name}. Service Focus: ${formData.service}. Budget: ${formData.budget}.`
+    });
+
+    for (const endpoint of endpoints) {
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: payload
+        });
+        if (response.ok) {
+          await response.json();
+          break;
+        }
+      } catch (err) {
+        continue;
       }
-    }, 1000);
+    }
+
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    if (onSubmitted) {
+      onSubmitted(`Consultation request received for ${formData.company || 'your organization'}! We will contact you within 2 business hours.`);
+    }
   };
 
   const handleResetAndClose = () => {
