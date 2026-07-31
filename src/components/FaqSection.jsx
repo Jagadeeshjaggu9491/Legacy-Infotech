@@ -76,31 +76,32 @@ export default function FaqSection() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))',
             gap: '3.5rem',
             alignItems: 'center'
           }}
         >
           {/* Left Column: FAQ Accordion */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.95rem' }}>
             {faqs.map((item, idx) => {
               const isOpen = openIndex === idx;
               return (
                 <div
                   key={idx}
                   style={{
-                    border: '1px solid var(--border-color)',
+                    border: isOpen ? '1px solid rgba(0, 82, 204, 0.35)' : '1px solid var(--border-color)',
                     borderRadius: 'var(--radius-md)',
                     background: 'var(--bg-card)',
                     overflow: 'hidden',
-                    transition: 'all 0.25s ease'
+                    boxShadow: isOpen ? '0 10px 30px rgba(0, 82, 204, 0.08)' : 'none',
+                    transition: 'border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease'
                   }}
                 >
                   <button
                     onClick={() => setOpenIndex(isOpen ? -1 : idx)}
                     style={{
                       width: '100%',
-                      padding: '1.1rem 1.4rem',
+                      padding: '1.2rem 1.4rem',
                       background: 'none',
                       border: 'none',
                       display: 'flex',
@@ -110,40 +111,52 @@ export default function FaqSection() {
                       textAlign: 'left',
                       color: isOpen ? '#0052CC' : 'var(--text-main)',
                       fontWeight: 700,
-                      fontSize: '0.98rem'
+                      fontSize: '0.98rem',
+                      transition: 'color 0.25s ease'
                     }}
                   >
-                    <span>{item.q}</span>
+                    <span style={{ paddingRight: '1rem', lineHeight: 1.4 }}>{item.q}</span>
                     <div
                       style={{
-                        width: '28px',
-                        height: '28px',
+                        width: '32px',
+                        height: '32px',
                         borderRadius: '50%',
                         background: isOpen ? 'rgba(0, 82, 204, 0.12)' : 'var(--bg-secondary)',
                         color: isOpen ? '#0052CC' : 'var(--text-muted)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        flexShrink: 0
+                        flexShrink: 0,
+                        transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                        transition: 'transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, color 0.3s ease'
                       }}
                     >
                       {isOpen ? <Minus size={16} /> : <Plus size={16} />}
                     </div>
                   </button>
 
-                  {isOpen && (
-                    <div
-                      style={{
-                        padding: '0 1.4rem 1.2rem 1.4rem',
-                        fontSize: '0.92rem',
-                        color: 'var(--text-muted)',
-                        lineHeight: 1.6,
-                        animation: 'fadeIn 0.2s ease'
-                      }}
-                    >
-                      {item.a}
+                  {/* Smooth Accordion Height & Opacity Transition */}
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateRows: isOpen ? '1fr' : '0fr',
+                      opacity: isOpen ? 1 : 0,
+                      transition: 'grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease'
+                    }}
+                  >
+                    <div style={{ overflow: 'hidden' }}>
+                      <div
+                        style={{
+                          padding: '0 1.4rem 1.25rem 1.4rem',
+                          fontSize: '0.94rem',
+                          color: 'var(--text-muted)',
+                          lineHeight: 1.65
+                        }}
+                      >
+                        {item.a}
+                      </div>
                     </div>
-                  )}
+                  </div>
                 </div>
               );
             })}
